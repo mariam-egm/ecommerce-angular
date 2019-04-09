@@ -1,14 +1,13 @@
-<label>
-  Name:
-  <input type="text" [formControl]="name">
-</label>
-
-<app-input [type]="'text'" [placeholder]="'Enter your name'"></app-input>
-<br>
-<br>
-
-
-<label>
-  Password:
-  <input type="password" [formControl]="password">
-</label>
+<form [formGroup] = "registerForm" (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="firstName" formControlName="firstName">
+  <!-- <p *ngIf="firstName.errors.minlength && firstName.touched">Min length is 3</p> -->
+  <input type="text" placeholder="lastName" formControlName="lastName">
+  <!-- <p *ngIf="lastName.errors.minlength && lastName.touched">Min length is 3</p> -->
+  <input type="email" placeholder="email" formControlName="email">
+  <p *ngIf="email.invalid && email.touched"> this is invalid email </p>
+  <input type="password" placeholder="password" formControlName="password"> 
+  <!-- <p *ngIf="password.errors.minlength && password.touched">Min length is 8</p> -->
+  <!-- <p *ngIf="password.errors.maxlength && password.touched">Max length is 16</p> -->
+  
+  <button [disabled]="registerForm.invalid">Submit</button>
+</form>
