@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { InputComponent } from './components/shared/input/input.component';
 import { SubmitComponent } from './components/shared/submit/submit.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SubmitComponent } from './components/shared/submit/submit.component';
     RegisterComponent,
     InputComponent,
     SubmitComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
