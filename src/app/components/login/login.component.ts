@@ -44,5 +44,4 @@ export class LoginComponent implements OnInit {
       alert('You are not a member! Please register');
     }  
   }
-
 }

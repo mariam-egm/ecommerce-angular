@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { InputComponent } from './components/shared/input/input.component';
 import { SubmitComponent } from './components/shared/submit/submit.component';
 import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
     InputComponent,
     SubmitComponent,
     LoginComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
