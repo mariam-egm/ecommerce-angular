@@ -6,11 +6,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
+import { InputComponent } from './components/shared/input/input.component';
+import { SubmitComponent } from './components/shared/submit/submit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
+    InputComponent,
+    SubmitComponent,
   ],
   imports: [
     BrowserModule,
