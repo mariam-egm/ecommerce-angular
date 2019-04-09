@@ -1,13 +1,32 @@
-<form [formGroup] = "registerForm" (ngSubmit)="onSubmit()">
-  <input type="text" placeholder="firstName" formControlName="firstName">
-  <!-- <p *ngIf="firstName.errors.minlength && firstName.touched">Min length is 3</p> -->
-  <input type="text" placeholder="lastName" formControlName="lastName">
-  <!-- <p *ngIf="lastName.errors.minlength && lastName.touched">Min length is 3</p> -->
-  <input type="email" placeholder="email" formControlName="email">
-  <p *ngIf="email.invalid && email.touched"> this is invalid email </p>
-  <input type="password" placeholder="password" formControlName="password"> 
-  <!-- <p *ngIf="password.errors.minlength && password.touched">Min length is 8</p> -->
-  <!-- <p *ngIf="password.errors.maxlength && password.touched">Max length is 16</p> -->
-  
-  <button [disabled]="registerForm.invalid">Submit</button>
+
+<!-- Default form register -->
+<form [formGroup] = "registerForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
+
+  <p class="h4 mb-4">Sign up</p>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <!-- First name -->
+      <input formControlName="firstName" type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <!-- Last name -->
+      <input formControlName="lastName" type="text" class="form-control" placeholder="Last name">
+    </div>
+
+  </div>
+  <!-- E-mail -->
+  <input formControlName="email" type="email" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Password -->
+  <input formControlName="password" type="password" class="form-control" placeholder="Password">
+  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+    At least 8 characters
+  </small>
+
+
+  <!-- Sign up button -->
+  <button mdbBtn color="info" block="true" class="my-4" type="submit" [disabled]="registerForm.invalid" >Sign in</button>
+
 </form>
+<!-- Default form register -->
