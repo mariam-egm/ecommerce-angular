@@ -11,6 +11,9 @@ import { SubmitComponent } from './components/shared/submit/submit.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProductsService } from './services/products.service';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,16 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     HeaderComponent,
     HomeComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
