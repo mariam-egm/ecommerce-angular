@@ -1,6 +1,9 @@
-
 <ng-template [ngIf]="products != undefined">
-  <h1>
-    {{products[1].Name}}
-  </h1>
+  <ng-container *ngFor="let product of products; let i = index;">
+    <app-product name="{{products[i].Name}}" 
+                imageURL="{{products[i].ProductPicUrl}}"
+                price = "{{products[i].Price}}"
+                description= "{{products[i].Description}}">
+    </app-product>
+  </ng-container>
 </ng-template>
