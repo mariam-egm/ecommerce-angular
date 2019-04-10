@@ -10,6 +10,7 @@ import { InputComponent } from './components/shared/input/input.component';
 import { SubmitComponent } from './components/shared/submit/submit.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
     SubmitComponent,
     LoginComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
