@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products.service';
 import { ProductComponent } from './components/product/product.component';
+import { ButtonComponent } from './components/shared/button/button.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProductComponent } from './components/product/product.component';
     HeaderComponent,
     HomeComponent,
     ProductComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,

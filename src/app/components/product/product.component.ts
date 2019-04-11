@@ -14,5 +14,13 @@ export class ProductComponent implements OnInit {
   @Input('description') description: string;
   ngOnInit() {
   }
-
+  addToWishList(){
+    alert('Added To Wish list');
+  }
+  addToCart(){
+    alert('added To cart');
+  }
+  seeDetails(){
+    alert('see details');
+  }
 }

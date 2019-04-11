@@ -54,11 +54,15 @@
     <div class="info">
       <h2>Options</h2>
       <ul>
-        <li><button>Add to wish list</button></li>
+        <li> <app-button [name]="'Add to Wish List'" (clicked) ="addToWishList()"> </app-button> 
+        </li>
         <br>
-        <li><button>Add to card     </button></li>
+        <li> <app-button [name]="'Add to Cart'" (clicked) ="addToCart()"> </app-button> 
+        </li>
         <br>
-        <li><button>See details     </button></li>
+        <li> <app-button [name]="'See Dtails'" (clicked) ="seeDetails()"> </app-button> 
+        </li>
+        <br>
       </ul>
     </div>
     </div>
