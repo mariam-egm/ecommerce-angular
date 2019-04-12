@@ -17,15 +17,21 @@
         <li class="nav-item">
             <a class="nav-link" href="/cart"> <span class="numberCircle"> {{cartCounter}} </span> </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/wishlist">Wish List</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/cart"> <span class="numberCircle"> {{wishCounter}} </span> </a>
+          </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/wishlist" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Wish List <span class="numberCircle"> {{wishCounter}} </span> 
+            Cart 
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <ng-container *ngFor="let product of wishListProducts;">  
-            <app-option></app-option> 
+          <ng-container *ngFor="let product of cartProducts;">  
+            <app-option [name]="product.Name"></app-option>
+            <br> 
           </ng-container>
-          <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
       </ul>
