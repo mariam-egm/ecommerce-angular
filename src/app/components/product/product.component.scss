@@ -113,7 +113,11 @@ background: #DFC2F2;
 	margin: 0;
 	
 }
+ul {
+	list-style-type: none;
+	// text-align:center;
 
+}
 .btn:hover{transform: translateY(-4px);}
 
 .btn span {
