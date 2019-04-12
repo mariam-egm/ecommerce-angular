@@ -18,11 +18,35 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
   
   }
-  addToWishList(){
+  addToWishList(
+            ProductId: string,
+            Description: string,
+            Name: string,
+            ProductPicUrl: string,
+            Price: number
+  ){
+
+    let wishListProducts: any;
+
+    if (localStorage.getItem("wishListProducts")) {
+      wishListProducts = JSON.parse(localStorage.getItem('wishListProducts'));
+    } else {
+        wishListProducts = [];
+    }
+    
+    let newProduct = {
+      ProductId: ProductId,
+      Description:Description,
+      Name: Name,
+      ProductPicUrl: ProductPicUrl,
+      Price: Price
+    };
+    wishListProducts.push(newProduct);
+    localStorage.setItem("wishListProducts", JSON.stringify(wishListProducts));
     
     alert('Added To Wish list');
   }
-  
+
   addToCart(ProductId: string,
             Description: string,
             Name: string,
