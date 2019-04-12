@@ -1,3 +1,15 @@
 nav {
-    background-color: #42dcf4;
+    background-color:#48C9B0;
+}
+.numberCircle {
+    border-radius: 50%;
+    /* remove if you don't care about IE8 */
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background:#5499C7;
+    border: 5px #2980B9;
+    color: #ffffff;
+    text-align: center;
+    font: 20px Arial, sans-serif;
 }
