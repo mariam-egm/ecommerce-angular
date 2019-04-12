@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SinglePageComponent } from './components/single-page/single-page.component';
 import { CartComponent } from './components/cart/cart.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -14,9 +15,9 @@ const routes: Routes = [
   { path : 'login', component: LoginComponent},
   { path : 'cart', component: CartComponent},
   { path : 'wishlist', component: WishListComponent},
-  { path : ':productIndex', component: SinglePageComponent},
-
-
+  { path : 'product/:productIndex', component: SinglePageComponent},
+  
+  { path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({

@@ -19,6 +19,7 @@ import { SinglePageComponent } from './components/single-page/single-page.compon
 import { CartComponent } from './components/cart/cart.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { OptionComponent } from './componendt/shared/option/option.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { OptionComponent } from './componendt/shared/option/option.component';
     CartComponent,
     WishListComponent,
     OptionComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
