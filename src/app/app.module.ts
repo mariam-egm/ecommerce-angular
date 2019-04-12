@@ -18,6 +18,7 @@ import { ButtonComponent } from './components/shared/button/button.component';
 import { SinglePageComponent } from './components/single-page/single-page.component';
 import { CartComponent } from './components/cart/cart.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
+import { OptionComponent } from './componendt/shared/option/option.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { WishListComponent } from './components/wish-list/wish-list.component';
     SinglePageComponent,
     CartComponent,
     WishListComponent,
+    OptionComponent,
   ],
   imports: [
     BrowserModule,
