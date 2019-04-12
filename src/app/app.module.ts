@@ -16,6 +16,8 @@ import { ProductsService } from './services/products.service';
 import { ProductComponent } from './components/product/product.component';
 import { ButtonComponent } from './components/shared/button/button.component';
 import { SinglePageComponent } from './components/single-page/single-page.component';
+import { CartComponent } from './components/cart/cart.component';
+import { WishListComponent } from './components/wish-list/wish-list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { SinglePageComponent } from './components/single-page/single-page.compon
     ProductComponent,
     ButtonComponent,
     SinglePageComponent,
+    CartComponent,
+    WishListComponent,
   ],
   imports: [
     BrowserModule,
