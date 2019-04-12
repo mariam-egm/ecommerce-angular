@@ -28,10 +28,15 @@
             Cart 
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <ng-container *ngFor="let product of cartProducts;">  
-            <app-option [name]="product.Name"></app-option>
-            <br> 
+            <table>
+              <tbody>              
+                <ng-container *ngFor="let product of cartProducts;">  
+                  <tr>
+                    <app-option [name]="product.Name"></app-option>
+                  </tr>
           </ng-container>
+          </tbody>
+          </table>
           </div>
         </li>
       </ul>

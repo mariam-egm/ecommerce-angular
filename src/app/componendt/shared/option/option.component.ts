@@ -20,6 +20,7 @@ export class OptionComponent implements OnInit {
     this.cartProducts.splice(index,1);
     console.log(this.cartProducts);
     localStorage.setItem('cartProducts', JSON.stringify(this.cartProducts));
+    window.location.reload();
     alert('deleted');
   }
 
