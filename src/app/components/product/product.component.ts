@@ -39,6 +39,7 @@ export class ProductComponent implements OnInit {
     };
     wishListProducts.push(newProduct);
     localStorage.setItem("wishListProducts", JSON.stringify(wishListProducts));
+    this.storageProduct.wishCounter.next(wishListProducts.length);
     
     alert('Added To Wish list');
   }

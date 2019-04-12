@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
         isMember = true;
         if(localUsers[i].password == this.loginForm.value.password)
         {
+          this.router.navigate(['/'])
           console.log('you are logged in');
         }else{
           alert('Wrong user name or password');
