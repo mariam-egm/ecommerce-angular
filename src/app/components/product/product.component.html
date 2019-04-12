@@ -60,7 +60,8 @@
         <li> <app-button [name]="'Add to Cart'" (clicked) ="addToCart()"> </app-button> 
         </li>
         <br>
-        <li> <app-button [name]="'See Dtails'" (clicked) ="seeDetails()"> </app-button> 
+        <!-- <li> <app-button [name]="'See Dtails'" (clicked) ="seeDetails('product/:HT-1000')"> </app-button>  -->
+          <li> <app-button [name]="'See Dtails'" [routerLink]="productIndex"> </app-button> 
         </li>
         <br>
       </ul>
