@@ -56,5 +56,7 @@ export class RegisterComponent implements OnInit {
     };
     localUsers.push(newUser);
     localStorage.setItem("localUsers", JSON.stringify(localUsers));
+    this.router.navigate(['/'])
+
   }
 }
