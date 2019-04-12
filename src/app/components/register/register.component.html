@@ -2,31 +2,31 @@
 <!-- Default form register -->
 <form [formGroup] = "registerForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
 
-  <p class="h4 mb-4">Sign up</p>
+  <p class="h4 mb-4">Register</p>
 
   <div class="form-row mb-4">
     <div class="col">
       <!-- First name -->
-      <input formControlName="firstName" type="text" class="form-control" placeholder="First name">
+      <input formControlName="firstName" type="text" class="form-control" placeholder="First name" required>
     </div>
     <div class="col">
       <!-- Last name -->
-      <input formControlName="lastName" type="text" class="form-control" placeholder="Last name">
+      <input formControlName="lastName" type="text" class="form-control" placeholder="Last name" required>
     </div>
 
   </div>
   <!-- E-mail -->
-  <input formControlName="email" type="email" class="form-control mb-4" placeholder="E-mail">
+  <input formControlName="email" type="email" class="form-control mb-4" placeholder="E-mail" required>
 
   <!-- Password -->
-  <input formControlName="password" type="password" class="form-control" placeholder="Password">
+  <input formControlName="password" type="password" class="form-control" placeholder="Password" required minlength="8" maxlength="18">
   <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
     At least 8 characters
   </small>
 
 
   <!-- Sign up button -->
-  <button mdbBtn color="info" block="true" class="my-4" type="submit" [disabled]="registerForm.invalid" >Sign in</button>
+  <button color="info" block="true" class="my-4" type="submit" [disabled]="registerForm.invalid" >Sign in</button>
 
 </form>
 <!-- Default form register -->
