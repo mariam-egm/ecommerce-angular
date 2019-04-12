@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   private wishListProducts;
-
-  constructor() { }
+  private cartCounter;
+  constructor(private storage: LocalStorageService) { }
 
   ngOnInit() {
+    this.storage.getCartCounter().subscribe(data => this.cartCounter = data)
     this.wishListProducts = JSON.parse(localStorage.getItem('cartProducts')) || []
   }
 

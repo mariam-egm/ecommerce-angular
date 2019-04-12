@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-product',
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private storageProduct: LocalStorageService) { }
   @Input('name') name: string;
   @Input('price') price: string;
   @Input('imageURL') imageURL: string;
@@ -65,6 +67,7 @@ export class ProductComponent implements OnInit {
     };
     cartProducts.push(newProduct);
     localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-    alert('added To cart');
+    // alert('added To cart');
+    this.storageProduct.cartCounter.next(cartProducts.length);
   }
 }
