@@ -11,10 +11,13 @@ export class CartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-    this.cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || []
-    
-    console.log(this.cartProducts);
+    this.cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || []    
   }
 
+  deleteProduct(index: number){
+    this.cartProducts.splice(index,1);
+    console.log(this.cartProducts);
+    localStorage.setItem('cartProducts', JSON.stringify(this.cartProducts));
+    alert('deleted');
+  }
 }

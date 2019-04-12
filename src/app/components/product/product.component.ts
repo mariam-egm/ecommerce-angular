@@ -23,17 +23,11 @@ export class ProductComponent implements OnInit {
             Description: string,
             Name: string,
             ProductPicUrl: string,
-            Price: number
-  ){
-
+            Price: number){
     let wishListProducts: any;
 
-    if (localStorage.getItem("wishListProducts")) {
-      wishListProducts = JSON.parse(localStorage.getItem('wishListProducts'));
-    } else {
-        wishListProducts = [];
-    }
-    
+    wishListProducts = JSON.parse(localStorage.getItem('wishListProducts')) || [];
+
     let newProduct = {
       ProductId: ProductId,
       Description:Description,
