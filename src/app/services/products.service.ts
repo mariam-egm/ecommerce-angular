@@ -21,4 +21,6 @@ export class ProductsService {
     this.productsAPI = this.http.get <ProductsModel[]> (this.apiURL);
     return this.productsAPI;
   }
+
+  
 }
