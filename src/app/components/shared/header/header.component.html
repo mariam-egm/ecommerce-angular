@@ -15,11 +15,11 @@
           <a class="nav-link" href="/cart">Cart</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/cart">{{cartCounter}}</a>
-        </li>  
+            <a class="nav-link" href="/cart">Cart Count: {{cartCounter}}</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/wishlist" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Wish List
+            Wish List {{wishCounter}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <ng-container *ngFor="let product of wishListProducts;">  
